@@ -9,7 +9,7 @@
 ### Create a wpconn application
 
 Go to [wordpress apps](https://developer.wordpress.com/apps) and
-create a application to use to get the authorization codes
+create an application to use to get the oauth2 authorization.
 
 ### Create the wp oauth object
 
