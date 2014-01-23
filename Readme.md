@@ -8,7 +8,8 @@
 
 ### Create a wpconn application
 
-Go to [](https://developer.wordpress.com) and create a application to use to ask the authorization codes
+Go to [https://developer.wordpress.com](https://developer.wordpress.com) and
+create a application to use to get the authorization codes
 
 ### Create the wp oauth object
 
@@ -31,15 +32,17 @@ var wpoauth = new WPOAuth(config);
 
 ### WPOAuth#urlToConnect(resource)
 
-return a string with the url to start the oauth connection
+return a string with the url that points to first step for get the oauth
+connection.
 
 ### WPOAuth#setCode(code)
 
-Set the code to then try to request the access token.
+Set the needed code to request the access token.
 
 ### WPOAuth#requestAccessToken(fn)
 
-Init the OAuth2 request to wordpress.com. The method execute the function callback when it's done.
+Start the OAuth2 request to wordpress.com. The method execute callback function
+when it's done.
 
 ## License
 
