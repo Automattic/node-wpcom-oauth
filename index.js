@@ -57,15 +57,16 @@ function WPOAuth(options){
  */
 
 WPOAuth.prototype.urlToConnect = function(resource){
-  resource = resource || this.opts.resource;
-  debug('get url: %s', resource);
-
   var params = {
     "response_type": this.opts.response_type,
     "client_id": this.opts.client_id,
-    "redirect_uri": this.opts.url.redirect,
-    "blog": resource
+    "redirect_uri": this.opts.url.redirect
   };
+
+  if (resource) {
+    debug('get url: %s', resource);
+    params.resource = resource;
+  }
 
   return this.opts.endpoint.authorize + '?' + qs.stringify(params);
 };
