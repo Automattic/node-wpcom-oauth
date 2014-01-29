@@ -32,6 +32,7 @@ var def = {
  */
 
 function WPOAuth(options){
+  if (!(this instanceof WPOAuth)) return new WPOAuth(options);
   // Options
   this.opts = options || {};
 
