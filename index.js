@@ -24,6 +24,12 @@ var def = {
 };
 
 /**
+ * Options
+ */
+
+var _options;
+
+/**
  * Class constructor
  *
  * @param {Object} options
@@ -34,7 +40,7 @@ var def = {
 function WPOAuth(options){
   if (!(this instanceof WPOAuth)) return new WPOAuth(options);
   // Options
-  this.opts = options || {};
+  this.opts = _options = options || {};
 
   this.opts.url = this.opts.url || def.url;
   this.opts.response_type = this.opts.response_type || def.response_type;
@@ -125,6 +131,26 @@ WPOAuth.prototype.requestAccessToken = function(fn){
 
     fn(null, obj);
   });
+};
+
+/**
+ * Statics
+ */
+
+/**
+ * Return URL to connect
+ * 
+ * @return {String}
+ * @api public
+ */
+
+WPOAuth.urlToConnect = function(){
+  var params = {
+    "response_type": _options.response_type,
+    "client_id": _options.client_id,
+    "redirect_uri": _options.redirect
+  };
+  return def.endpoint.authorize + '?' + qs.stringify(params);
 };
 
 /**
