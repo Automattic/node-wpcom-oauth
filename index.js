@@ -109,19 +109,21 @@ WPOAuth.prototype.requestAccessToken = function(fn){
   req.post(url, data, function (err, res, body) {
     if (err) return fn(err);
 
+    var obj;
+
     try {
-      var obj = JSON.parse(body);
+      obj = JSON.parse(body);
       debug('oauth response: %j', obj);
-
-      // api error response
-      if (obj && obj.error) {
-        return fn(obj);
-      }
-
-      fn(null, obj);
     } catch(e) {
       fn(e);
     }
+
+    // api error response
+    if (obj && obj.error) {
+      return fn(obj);
+    }
+
+    fn(null, obj);
   });
 };
 
