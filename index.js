@@ -115,7 +115,7 @@ WPOAuth.prototype.requestAccessToken = function(fn){
       obj = JSON.parse(body);
       debug('oauth response: %j', obj);
     } catch(e) {
-      fn(e);
+      return fn(e);
     }
 
     // api error response
