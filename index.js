@@ -59,23 +59,11 @@ function WPOAuth(options){
 /**
  * Get url to connect
  *
- * @param {String} resource (optional)
  * @api public
  */
 
 WPOAuth.prototype.urlToConnect = function(resource){
-  var params = {
-    "response_type": this.opts.response_type,
-    "client_id": this.opts.client_id,
-    "redirect_uri": this.opts.url.redirect
-  };
-
-  if (resource) {
-    debug('get url: %s', resource);
-    params.resource = resource;
-  }
-
-  return this.opts.endpoint.authorize + '?' + qs.stringify(params);
+  return WPOAuth.urlToConnect(resource);
 };
 
 /**
@@ -140,17 +128,26 @@ WPOAuth.prototype.requestAccessToken = function(fn){
 /**
  * Return URL to connect
  * 
+ * @param {String} resource (optional)
  * @return {String}
  * @api public
  */
 
-WPOAuth.urlToConnect = function(){
+WPOAuth.urlToConnect = function(resource){
   var params = {
     "response_type": _options.response_type,
     "client_id": _options.client_id,
-    "redirect_uri": _options.redirect
+    "redirect_uri": _options.url.redirect
   };
-  return def.endpoint.authorize + '?' + qs.stringify(params);
+
+  if (resource) {
+    debug('get url: %s', resource);
+    params.blog = resource;
+  }
+
+  var link =  def.endpoint.authorize + '?' + qs.stringify(params);
+  debug('url: `%s`', link);
+  return link;
 };
 
 /**
