@@ -16,7 +16,7 @@ create an application to use to get the oauth2 authorization.
 ```js
 var WPOAuth = require('wp-oauth');
 var config = {
-  "client_id": "<your client ir>",
+  "client_id": "<your client id>",
   "client_secret": "<your access token>",
   "url":  {
     "redirect": "<redirect uri>"
