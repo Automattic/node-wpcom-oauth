@@ -1,7 +1,7 @@
 
 # Simple WPOAuth application
 
-Simple application to show how WPAUth works.
+Simple application to show how WPAuth works.
 
 ## How to use
 
