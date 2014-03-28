@@ -5,8 +5,6 @@ block content
   p Simple application to test WPOAuth module
 
   h2 Settings
-  p Settings ware defined in <em>setting.json</em> file.
-
   table
     tr
       td your client id
@@ -16,4 +14,15 @@ block content
       td.client_secret #{setting.client_secret}
     tr
       td redirect url
-      td.client_secret #{setting.redirect}
+      td.client_secret #{setting.url.redirect}
+  p Settings are defined in <em>setting.json</em> file.
+
+  h2 Get access token
+  p Use <em>WPOAuth#urlToConnect()</em> method to get the url to ask for the access token.
+
+  table
+    tr
+      td url
+      td #{url}
+  p
+    a(href=url) Let's get the access token !

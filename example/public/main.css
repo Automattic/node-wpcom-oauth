@@ -8,6 +8,10 @@ h1 {
   color: #a04;
 }
 
+h2 {
+  margin-top: 50px;
+}
+
 table {
   border-spacing: 0;
 }
@@ -26,6 +30,12 @@ table tr td:nth-child(1) {
 table tr td:nth-child(2) {
   background-color: #f5f5f5;
   color: #a04;
+}
+
+em {
+  padding: 2px 5px;
+  color: #333;
+  background-color: #f5f5f5;
 }
 
 .client_secret {
