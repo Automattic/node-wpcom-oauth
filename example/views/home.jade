@@ -2,4 +2,18 @@
 extends layout
 
 block content
-  h2 Start request to get acess token
+  p Simple application to test WPOAuth module
+
+  h2 Settings
+  p Settings ware defined in <em>setting.json</em> file.
+
+  table
+    tr
+      td your client id
+      td #{setting.client_id}
+    tr
+      td your client secret
+      td.client_secret #{setting.client_secret}
+    tr
+      td redirect url
+      td.client_secret #{setting.redirect}

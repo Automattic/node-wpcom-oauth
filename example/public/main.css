@@ -7,3 +7,27 @@ body {
 h1 {
   color: #a04;
 }
+
+table {
+  border-spacing: 0;
+}
+
+table tr td {
+  padding: 5px 15px;
+  border-bottom: 2px solid white
+}
+
+table tr td:nth-child(1) {
+  background-color: #eee;
+  font-size: 12px;
+  color: #aaa;
+}
+
+table tr td:nth-child(2) {
+  background-color: #f5f5f5;
+  color: #a04;
+}
+
+.client_secret {
+  font-size: 12px;
+}
