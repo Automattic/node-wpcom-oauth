@@ -7,7 +7,7 @@ var express = require('express');
 var WPOAuth = require('../');
 
 /**
- * Get settings data
+ * Get setting data
  */
 
 var setting = require('./setting.json');
@@ -28,7 +28,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 
 app.get('/', function(req, res){
-  res.render('home');
+  res.render('home', { setting: setting });
 });
 
 app.listen(3000);
