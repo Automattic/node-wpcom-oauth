@@ -17,9 +17,9 @@ var def = {
     redirect: '/wpoauth/connected'
   },
   endpoint: {
-    request_token:  "https://public-api.wordpress.com/oauth2/token",
-    authorize:      "https://public-api.wordpress.com/oauth2/authorize",
-    authenticate:   "https://public-api.wordpress.com/oauth2/authenticate"
+    request_token: "https://public-api.wordpress.com/oauth2/token",
+    authorize: "https://public-api.wordpress.com/oauth2/authorize",
+    authenticate: "https://public-api.wordpress.com/oauth2/authenticate"
   }
 };
 
@@ -27,7 +27,7 @@ var def = {
  * Options
  */
 
-var _options;
+var globals;
 
 /**
  * Class constructor
@@ -39,8 +39,9 @@ var _options;
 
 function WPOAuth(options){
   if (!(this instanceof WPOAuth)) return new WPOAuth(options);
+
   // Options
-  this.opts = _options = options || {};
+  this.opts = globals = options || {};
 
   this.opts.url = this.opts.url || def.url;
   this.opts.response_type = this.opts.response_type || def.response_type;
@@ -54,7 +55,7 @@ function WPOAuth(options){
   if (!this.opts.client_secret) {
     return new Error('`client_secret` is required');
   }
-};
+}
 
 /**
  * Get url to connect
@@ -86,7 +87,7 @@ WPOAuth.prototype.setCode = function(code){
  */
 
 WPOAuth.prototype.requestAccessToken = function(fn){
-  if (undefined == typeof this.code) {
+  if ('undefined' == typeof this.code) {
     return fn(new Error('`code` is really needed'));
   }
 
@@ -135,9 +136,9 @@ WPOAuth.prototype.requestAccessToken = function(fn){
 
 WPOAuth.urlToConnect = function(resource){
   var params = {
-    "response_type": _options.response_type,
-    "client_id": _options.client_id,
-    "redirect_uri": _options.url.redirect
+    "response_type": globals.response_type,
+    "client_id": globals.client_id,
+    "redirect_uri": globals.url.redirect
   };
 
   if (resource) {
