@@ -1,7 +1,5 @@
 {
   "client_id": "<your client id here>",
   "client_secret": "<your client secret here>",
-  "url":  {
-    "redirect": "http://localhost/response"
-  }
+  "redirect": "http://localhost/response"
 }
