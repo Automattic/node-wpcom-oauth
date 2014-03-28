@@ -27,8 +27,12 @@ app.use(express.static(pub));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 
+// homepage route
 app.get('/', function(req, res){
-  res.render('home', { setting: setting });
+  res.render('home', {
+    setting: setting,
+    url: wpoauth.urlToConnect()
+  });
 });
 
 app.listen(3000);
