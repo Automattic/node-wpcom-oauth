@@ -6,12 +6,12 @@
 
 ## How to use
 
-### Create a wpconn application
+### 1 - Create a wpconn application
 
 Go to [wordpress apps](https://developer.wordpress.com/apps) and
-create an application to use to get the oauth2 authorization.
+create an application to use to ask the oauth2 authorization.
 
-### Create the wp oauth object
+### 2 - Create the WPOAuth instance
 
 ```js
 var WPOAuth = require('wp-oauth');
@@ -25,7 +25,7 @@ var config = {
 
 // `redirect uri` is the uri in your app where the code (into the querystring) will be gotten.
 
-var wpoauth = new WPOAuth(config);
+var wpoauth = WPOAuth(config);
 ```
 
 ## API
