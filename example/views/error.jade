@@ -3,12 +3,12 @@ extends layout
 
 block content
   h2.err Error
-  table
+  table.err
     tr
       td error
       td #{error}
     tr
       td description
       td #{error_description}
-  p
+  p.msg
     a(href='/') Try again ?

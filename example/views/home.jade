@@ -2,7 +2,8 @@
 extends layout
 
 block content
-  p Simple application to test WPOAuth module
+  p Simple application to test 
+    a(href="https://www.github.com/cloudup/wp-oauth") WPOAuth module.
 
   h2 Settings
   table
@@ -23,6 +24,6 @@ block content
   table
     tr
       td url
-      td #{url}
-  p
+      td.url #{url}
+  p.msg
     a(href=url) Let's get the access token !
