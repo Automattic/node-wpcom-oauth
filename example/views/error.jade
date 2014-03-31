@@ -1,0 +1,14 @@
+
+extends layout
+
+block content
+  h2.err Error
+  table
+    tr
+      td error
+      td #{error}
+    tr
+      td description
+      td #{error_description}
+  p
+    a(href='/') Try again ?
