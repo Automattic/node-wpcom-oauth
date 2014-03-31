@@ -12,6 +12,12 @@ h2 {
   margin-top: 50px;
 }
 
+h2.err {
+  background-color: #fee;
+  color: red;
+  padding: 5px 20px;
+}
+
 table {
   border-spacing: 0;
 }
