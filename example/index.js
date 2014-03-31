@@ -49,7 +49,8 @@ app.get('/connect/res', function(req, res){
   // request access token
   wpoauth.requestAccessToken(function(err, data){
     if (err) return res.render('error', err);
-    res.send(data);
+
+    res.render('ok', data);
   });
 });
 
