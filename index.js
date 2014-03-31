@@ -49,11 +49,11 @@ function WPOAuth(options){
 
   // Error exceptions
   if (!this.opts.client_id) {
-    return new Error('`client_id` is required');
+    throw new Error('`client_id` is required');
   }
 
   if (!this.opts.client_secret) {
-    return new Error('`client_secret` is required');
+    throw new Error('`client_secret` is required');
   }
 }
 
