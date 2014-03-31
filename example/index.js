@@ -36,12 +36,16 @@ app.get('/', function(req, res){
 });
 
 // connect response route
+// grab code query param
 app.get('/connect/res', function(req, res){
-  // get the code from que querystring
   var code = req.query.code;
+  res.render('ready', { code: code });
+});
 
+// access token route
+app.get('/get_token/:code', function(req, res){
   // pass the code into setting parameters
-  setting.code = code;
+  setting.code = req.params.code;
 
   // create a connect oauth instance
   var wpoauth = WPOAuth(setting);
