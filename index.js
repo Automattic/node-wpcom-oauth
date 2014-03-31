@@ -11,17 +11,7 @@ var debug = require('debug')('wp-oauth');
  * Default options
  */
 
-var def = {
-  response_type: "code",
-  url: {
-    redirect: '/wpoauth/connected'
-  },
-  endpoint: {
-    request_token: "https://public-api.wordpress.com/oauth2/token",
-    authorize: "https://public-api.wordpress.com/oauth2/authorize",
-    authenticate: "https://public-api.wordpress.com/oauth2/authenticate"
-  }
-};
+var def = require('./default');
 
 /**
  * Options
