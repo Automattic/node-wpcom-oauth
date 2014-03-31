@@ -3,7 +3,7 @@
  * Module dependencies.
  */
 
-var req = require('request');
+var req = require('superagent');
 var qs = require('querystring');
 var debug = require('debug')('wp-oauth');
 
@@ -83,34 +83,29 @@ WPOAuth.prototype.requestAccessToken = function(fn){
     return fn(new Error('`code` is really needed'));
   }
 
-  var data = { form: {
+  var data = {
     "client_id": this.opts.client_id,
     "client_secret": this.opts.client_secret,
     "redirect_uri": this.opts.url.redirect,
     "code": this.code,
-    'grant_type': 'authorization_code'
-  } };
+    "grant_type": "authorization_code"
+  };
 
   var url = this.opts.endpoint.request_token;
 
-  req.post(url, data, function (err, res, body) {
+  req
+  .post(url)
+  .type('form')
+  .send(data)
+  .end(function (err, res) {
     if (err) return fn(err);
 
-    var obj;
-
-    try {
-      obj = JSON.parse(body);
-      debug('oauth response: %j', obj);
-    } catch(e) {
-      return fn(e);
-    }
-
     // api error response
-    if (obj && obj.error) {
-      return fn(obj);
+    if (res.body && res.body.error) {
+      return fn(res.body);
     }
 
-    fn(null, obj);
+    fn(null, res.body);
   });
 };
 
