@@ -2,7 +2,7 @@
 {
   "name": "wp-oauth",
   "description": "Wordpress OAuth2 authorization module for nodejs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
     "name": "Damian Suarez",
     "email": "rdsuarez@gmail.com"
