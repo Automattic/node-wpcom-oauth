@@ -44,6 +44,20 @@ Set the needed code to request the access token.
 Start the OAuth2 request to wordpress.com. The method execute callback function
 when it's done.
 
+## Example
+
+Into `example/` folder download the npm dependencies:
+
+```cli
+$ npm install
+```
+
+... and then run the application
+
+```cli
+$ node index.js
+```
+
 ## License
 
 MIT – Copyright 2014 Automattic
