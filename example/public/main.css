@@ -53,9 +53,11 @@ table.ok tr td:nth-child(2) {
 }
 
 em {
-  padding: 2px 5px;
-  color: #333;
+  padding: 3px 5px;
+  color: #666;
   background-color: #f5f5f5;
+  border-radius: 2px;
+  font-style: normal;
 }
 
 .access_token,
@@ -65,6 +67,7 @@ em {
 }
 
 p.msg {
+  margin-top: 50px;
   text-align: center;
   background-color: #eee;
   padding: 5px;
