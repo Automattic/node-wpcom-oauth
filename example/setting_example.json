@@ -1,5 +1,7 @@
 {
   "client_id": "<your client id here>",
   "client_secret": "<your client secret here>",
-  "redirect": "http://localhost/response"
+  "url":  {
+    "redirect": "http://localhost/connect/res"
+  }
 }
