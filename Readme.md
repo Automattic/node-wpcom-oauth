@@ -3,31 +3,6 @@
 
   node.js module to connect your application with wordpress.com
 
-
-## How to use
-
-### 1 - Create a wpconn application
-
-Go to [wordpress apps](https://developer.wordpress.com/apps) and
-create an application to use to ask the oauth2 authorization.
-
-### 2 - Create the WPOAuth instance
-
-```js
-var WPOAuth = require('wp-oauth');
-var config = {
-  "client_id": "<your client id>",
-  "client_secret": "<your access token>",
-  "url":  {
-    "redirect": "<redirect uri>"
-  }
-}
-
-// `redirect uri` is the uri in your app where the code (into the querystring) will be gotten.
-
-var wpoauth = WPOAuth(config);
-```
-
 ## API
 
 ### WPOAuth#urlToConnect(resource)
