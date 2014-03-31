@@ -47,6 +47,8 @@ function WPOAuth(options){
   this.opts.response_type = this.opts.response_type || def.response_type;
   this.opts.endpoint = this.opts.endpoint || def.endpoint;
 
+  this.code = this.opts.code;
+
   // Error exceptions
   if (!this.opts.client_id) {
     throw new Error('`client_id` is required');
