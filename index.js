@@ -5,7 +5,7 @@
 
 var req = require('superagent');
 var qs = require('querystring');
-var debug = require('debug')('wp-oauth');
+var debug = require('debug')('wpcom-oauth');
 
 /**
  * Default options
