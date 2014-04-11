@@ -1,8 +1,8 @@
 
 {
-  "name": "wp-oauth",
+  "name": "wpcom-oauth",
   "description": "Wordpress OAuth2 authorization module for nodejs",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "author": {
     "name": "Damian Suarez",
     "email": "rdsuarez@gmail.com"
