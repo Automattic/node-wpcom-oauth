@@ -1,5 +1,4 @@
-
-# Wordpress OAuth authentication
+# WordPress OAuth authentication
 
   node.js module to connect your application with wordpress.com
 
