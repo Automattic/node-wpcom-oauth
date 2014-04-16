@@ -52,11 +52,13 @@ function WPOAuth(options){
 /**
  * Get url to connect
  *
+ * @param {Object} [resource]
+ * @param {Object} [param] query string vars
  * @api public
  */
 
-WPOAuth.prototype.urlToConnect = function(resource){
-  return WPOAuth.urlToConnect(resource);
+WPOAuth.prototype.urlToConnect = function(resource, params){
+  return WPOAuth.urlToConnect(resource, params);
 };
 
 /**
@@ -116,19 +118,24 @@ WPOAuth.prototype.requestAccessToken = function(fn){
 /**
  * Return URL to connect
  * 
- * @param {String} resource (optional)
- * @return {String}
+ * @param {String} [resource]
+ * @param {Object} [param] query string vars
+ * @return {String} url link
  * @api public
  */
 
-WPOAuth.urlToConnect = function(resource){
-  var params = {
-    "response_type": globals.response_type,
-    "client_id": globals.client_id,
-    "redirect_uri": globals.url.redirect
-  };
+WPOAuth.urlToConnect = function(resource, params){
+  if ('object' == typeof resource) {
+    params = resource;
+    resource = null;
+  }
+  params = params || {};
 
-  if (resource) {
+  params.response_type = globals.response_type;
+  params.client_id = globals.client_id;
+  params.redirect_uri = globals.url.redirect;
+
+  if (resource && !params.blog) {
     debug('get url: %s', resource);
     params.blog = resource;
   }
