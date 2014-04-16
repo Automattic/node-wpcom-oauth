@@ -45,10 +45,7 @@ app.get('/connect/res', function(req, res){
 // access token route
 app.get('/get_token/:code', function(req, res){
   // pass the code into setting parameters
-  setting.code = req.params.code;
-
-  // create a connect oauth instance
-  var wpoauth = WPOAuth(setting);
+  wpoauth.setCode(req.params.code);
 
   // request access token
   wpoauth.requestAccessToken(function(err, data){
