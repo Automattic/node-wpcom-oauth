@@ -31,7 +31,10 @@ app.set('view engine', 'jade');
 app.get('/', function(req, res){
   res.render('home', {
     setting: setting,
-    url: wpoauth.urlToConnect()
+    url: wpoauth.urlToConnect({
+      blog: 'retrofocs.wordpress.com',
+      scope: 'global'
+    })
   });
 });
 
