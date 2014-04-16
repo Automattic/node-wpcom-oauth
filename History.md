@@ -1,4 +1,9 @@
 
+0.1.1 / 2014-04-16
+==================
+
+ * add `params` object param to urlToConnect() method
+
 0.1.0 / 2014-04-11
 ==================
 
