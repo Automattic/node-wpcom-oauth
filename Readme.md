@@ -1,13 +1,19 @@
-# WordPress OAuth authentication
+# WordPress OAuth
 
-  node.js module to connect your application with wordpress.com
+  [Node.js][] module to get OAuth token from [WordPress.com][].
+
+
+## Installation
+
+```bash
+$ npm install wpcom-oauth
+```
 
 ## API
 
 ### WPOAuth#urlToConnect(resource)
 
-return a string with the url that points to first step for get the oauth
-connection.
+return the url that points to first step for get the access token.
 
 ### WPOAuth#setCode(code)
 
@@ -15,12 +21,11 @@ Set the needed code to request the access token.
 
 ### WPOAuth#requestAccessToken(fn)
 
-Start the OAuth2 request to wordpress.com. The method execute callback function
-when it's done.
+Start the OAuth2 request to WordPress.com and execute the callback function when it's done.
 
-## Example
+## Simple example application
 
-Into `example/` folder download the npm dependencies:
+See the [example documentation](./example/Readme.md) to run the app
 
 ```cli
 $ npm install
