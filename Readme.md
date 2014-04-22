@@ -1,6 +1,6 @@
 # WordPress OAuth
 
-  [Node.js][] module to get OAuth token from [WordPress.com][].
+  [Node.js](http://www.nodejs.org) module to get OAuth token from [WordPress.com](http://wordpress.com).
 
 
 ## Installation
@@ -13,7 +13,7 @@ $ npm install wpcom-oauth
 
 ### WPOAuth#urlToConnect(resource)
 
-return the url that points to first step for get the access token.
+Return the url that points to first step for get the access token.
 
 ### WPOAuth#setCode(code)
 
