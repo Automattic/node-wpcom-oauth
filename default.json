@@ -7,5 +7,6 @@
     "request_token": "https://public-api.wordpress.com/oauth2/token",
     "authorize": "https://public-api.wordpress.com/oauth2/authorize",
     "authenticate": "https://public-api.wordpress.com/oauth2/authenticate"
-  }
+  },
+  "grant_type": "authorization_code"
 }
