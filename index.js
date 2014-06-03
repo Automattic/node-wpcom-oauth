@@ -23,7 +23,6 @@ var globals;
  * Class constructor
  *
  * @param {Object} options
- *
  * @api public
  */
 
