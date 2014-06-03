@@ -67,7 +67,7 @@ WPOAuth.prototype.urlToConnect = function(resource, params){
  * @api public
  */
 
-WPOAuth.prototype.setCode = function(code){
+WPOAuth.prototype.code = function(code){
   this._code = code;
   debug('code: `%s`', this._code);
 };
