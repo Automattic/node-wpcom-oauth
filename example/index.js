@@ -18,8 +18,6 @@ var setting = require('./setting.json');
 
 var wpoauth = WPOAuth(setting);
 
-// setup middleware
-
 var pub = __dirname + '/public';
 var app = express();
 app.use(express.static(pub));
