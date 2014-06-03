@@ -35,6 +35,7 @@ function WPOAuth(options){
   this.opts.url = this.opts.url || def.url;
   this.opts.response_type = this.opts.response_type || def.response_type;
   this.opts.endpoint = this.opts.endpoint || def.endpoint;
+  this.opts.grant_type = this.opts.grant_type || def.grant_type;
 
   this._code = this.opts.code;
 
@@ -89,7 +90,7 @@ WPOAuth.prototype.requestAccessToken = function(fn){
     "client_secret": this.opts.client_secret,
     "redirect_uri": this.opts.url.redirect,
     "code": this._code,
-    "grant_type": "authorization_code"
+    "grant_type": this.opts.grant_type
   };
 
   var url = this.opts.endpoint.request_token;
