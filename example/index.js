@@ -32,8 +32,7 @@ app.get('/', function(req, res){
   res.render('home', {
     setting: setting,
     url: wpoauth.urlToConnect({
-      blog: 'retrofocs.wordpress.com',
-      scope: 'global'
+      blog: 'publicsiteapitesting.wordpress.com'
     })
   });
 });
@@ -48,12 +47,11 @@ app.get('/connect/res', function(req, res){
 // access token route
 app.get('/get_token/:code', function(req, res){
   // pass the code into setting parameters
-  wpoauth.setCode(req.params.code);
+  wpoauth.code(req.params.code);
 
   // request access token
   wpoauth.requestAccessToken(function(err, data){
     if (err) return res.render('error', err);
-
     res.render('ok', data);
   });
 });
