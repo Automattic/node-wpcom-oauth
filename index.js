@@ -36,7 +36,7 @@ function WPOAuth(options){
   this.opts.response_type = this.opts.response_type || def.response_type;
   this.opts.endpoint = this.opts.endpoint || def.endpoint;
 
-  this.code = this.opts.code;
+  this._code = this.opts.code;
 
   // Error exceptions
   if (!this.opts.client_id) {
@@ -68,8 +68,8 @@ WPOAuth.prototype.urlToConnect = function(resource, params){
  */
 
 WPOAuth.prototype.setCode = function(code){
-  debug('code: `%s`', code);
-  this.code = code;
+  this._code = code;
+  debug('code: `%s`', this._code);
 };
 
 /**
@@ -80,7 +80,7 @@ WPOAuth.prototype.setCode = function(code){
  */
 
 WPOAuth.prototype.requestAccessToken = function(fn){
-  if ('undefined' == typeof this.code) {
+  if ('undefined' == typeof this._code) {
     return fn(new Error('`code` is really needed'));
   }
 
@@ -88,7 +88,7 @@ WPOAuth.prototype.requestAccessToken = function(fn){
     "client_id": this.opts.client_id,
     "client_secret": this.opts.client_secret,
     "redirect_uri": this.opts.url.redirect,
-    "code": this.code,
+    "code": this._code,
     "grant_type": "authorization_code"
   };
 
