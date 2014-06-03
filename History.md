@@ -1,4 +1,10 @@
 
+0.2.0 / 2014-06-03
+==================
+
+ * set 'grant_type' as 'authorization_code' by default
+ * rename setCode() by code()
+
 0.1.1 / 2014-04-16
 ==================
 

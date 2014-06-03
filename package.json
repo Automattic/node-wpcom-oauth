@@ -2,11 +2,11 @@
 {
   "name": "wpcom-oauth",
   "description": "Wordpress OAuth2 authorization module for nodejs",
-  "version": "0.1.1",
-  "author": {
-    "name": "Damian Suarez",
-    "email": "rdsuarez@gmail.com"
-  },
+  "version": "0.2.0",
+  "author": "Automattic, Inc.",
+  "contributors": [
+    "Damian Suarez <rdsuarez@gmail.com>"
+  ],
   "main": "./index.js",
   "dependencies": {
     "debug": "*",
