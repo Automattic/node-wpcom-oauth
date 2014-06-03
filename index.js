@@ -31,11 +31,9 @@ function WPOAuth(options){
 
   // Options
   this.opts = globals = options || {};
-
-  this.opts.url = this.opts.url || def.url;
-  this.opts.response_type = this.opts.response_type || def.response_type;
-  this.opts.endpoint = this.opts.endpoint || def.endpoint;
-  this.opts.grant_type = this.opts.grant_type || def.grant_type;
+  for (var attr in def){
+    this.opts[attr] = this.opts[attr] || def[attr];
+  }
 
   this._code = this.opts.code;
 
