@@ -5,10 +5,10 @@ Simple application to show how WPAuth works.
 
 ## How to use
 
-### 1 - Create a wpconn application
+### 1 - Create a WordPress application
 
 Go to [wordpress apps](https://developer.wordpress.com/apps) and
-create an application to use to get the oauth access token.
+create your application to use to get the oauth access token.
 
 ### 2 - Create a setting json file
 
