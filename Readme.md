@@ -1,7 +1,7 @@
 # WordPress OAuth
 
-  [Node.js](http://www.nodejs.org) module to get OAuth token from [WordPress.com](http://wordpress.com).
-
+[WordPress.com](http://wordpress.com) OAuth2 authorization module for
+[Node.js](http://www.nodejs.org).
 
 ## Installation
 
