@@ -9,6 +9,7 @@
     "Damian Suarez <rdsuarez@gmail.com>"
   ],
   "main": "./index.js",
+  "license": "MIT",
   "dependencies": {
     "debug": "*",
     "superagent": "0.17.0"
