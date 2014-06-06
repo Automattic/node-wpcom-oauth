@@ -4,6 +4,7 @@
   "description": "Wordpress OAuth2 authorization module for nodejs",
   "version": "0.2.0",
   "author": "Automattic, Inc.",
+  "repository": "git@github.com:Automattic/node-wpcom-oauth.git",
   "contributors": [
     "Damian Suarez <rdsuarez@gmail.com>"
   ],
