@@ -1,4 +1,4 @@
-# WordPress OAuth
+# node-wpcom-oauth
 
 [WordPress.com](http://wordpress.com) OAuth2 authorization module for
 [Node.js](http://www.nodejs.org).
