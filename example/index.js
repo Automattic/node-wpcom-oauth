@@ -3,6 +3,7 @@
  * Module dependencies.
  */
 
+var URL = require('url');
 var express = require('express');
 var WPOAuth = require('../');
 
@@ -35,9 +36,11 @@ app.get('/', function(req, res){
   });
 });
 
+var redirectPath = URL.parse(wpoauth.opts.url.redirect).pathname;
+
 // connect response route
 // grab code query param
-app.get('/connect/res', function(req, res){
+app.get(redirectPath, function(req, res){
   var code = req.query.code;
   res.render('ready', { code: code });
 });
