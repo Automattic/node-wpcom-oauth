@@ -30,9 +30,7 @@ app.set('view engine', 'jade');
 app.get('/', function(req, res){
   res.render('home', {
     setting: setting,
-    url: wpoauth.urlToConnect({
-      blog: 'publicsiteapitesting.wordpress.com'
-    })
+    url: wpoauth.urlToConnect()
   });
 });
 
