@@ -1,12 +1,11 @@
-
 {
   "name": "wpcom-oauth",
   "description": "WordPress.com OAuth2 authorization module for Node.js",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "author": "Automattic, Inc.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Automattic/node-wpcom-oauth.git",
+    "url": "git://github.com/Automattic/node-wpcom-oauth.git"
   },
   "contributors": [
     "Damian Suarez <rdsuarez@gmail.com>",

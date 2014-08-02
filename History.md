@@ -1,4 +1,17 @@
 
+0.3.2 / 2014-08-01
+==================
+
+ * package: adjust "repository" field
+ * package: add Nathan Rajlich to "contributors" list
+ * package: update "description"
+ * package: add "license" field
+ * Remove the example test site.  If you're not a user of that blog, the authorization will fail. (#6, @mdawaffe)
+ * Don't hardcode the clien't redirect URL. Instead grab it from the oAuth settings. (#5, @mdawaffe)
+ * Readme: update title
+ * Readme: update description
+ * add LICENSE file
+
 0.3.1 / 2014-06-06
 ==================
 
