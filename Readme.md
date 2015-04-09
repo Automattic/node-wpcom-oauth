@@ -1,8 +1,10 @@
-# node-wpcom-oauth
+# wpcom-oauth
 
 [WordPress.com](http://wordpress.com) OAuth2 **server-side** authorization module for
-[Node.js](http://www.nodejs.org).  The **client-side** counterpart to this module is
-[`wpcom-oauth`](https://github.com/Automattic/wpcom-oauth).
+[Node.js](http://www.nodejs.org).
+
+The **client-side** counterpart to this module is
+[`wpcom-oauth-cors`](https://github.com/Automattic/wpcom-oauth-cors).
 
 ## Installation
 
