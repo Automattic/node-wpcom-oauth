@@ -1,7 +1,7 @@
 {
   "name": "wpcom-oauth",
   "description": "WordPress.com OAuth2 authorization module for Node.js",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "author": "Automattic, Inc.",
   "repository": {
     "type": "git",

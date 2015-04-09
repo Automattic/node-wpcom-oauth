@@ -1,4 +1,13 @@
 
+0.3.3 / 2015-04-09
+==================
+
+  * Final fixes to package names and docs crosslink
+  * Revert "Fix npm package name"
+  * Link to client-side module from server-side module docs
+  * Fix package name in readme
+  * Fix package name in package.json
+
 0.3.2 / 2014-08-01
 ==================
 
