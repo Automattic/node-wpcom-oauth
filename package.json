@@ -1,6 +1,6 @@
 {
-  "name": "node-wpcom-oauth",
-  "description": "WordPress.com OAuth2 server-side authorization module for Node.js",
+  "name": "wpcom-oauth",
+  "description": "WordPress.com OAuth2 authorization module for Node.js",
   "version": "0.3.2",
   "author": "Automattic, Inc.",
   "repository": {

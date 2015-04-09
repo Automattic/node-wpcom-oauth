@@ -6,7 +6,7 @@
 ## Installation
 
 ```bash
-$ npm install node-wpcom-oauth
+$ npm install wpcom-oauth
 ```
 
 ## API
