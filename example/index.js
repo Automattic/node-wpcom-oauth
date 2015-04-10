@@ -8,16 +8,16 @@ var express = require('express');
 var WPOAuth = require('../');
 
 /**
- * Get setting data
+ * Get settings data
  */
 
-var setting = require('./setting.json');
+var settings = require('./settings.json');
 
 /**
  * Create a WPOAuth instance
  */
 
-var wpoauth = WPOAuth(setting);
+var wpoauth = WPOAuth(settings);
 
 var pub = __dirname + '/public';
 var app = express();
@@ -29,7 +29,7 @@ app.set('view engine', 'jade');
 // homepage route
 app.get('/', function(req, res){
   res.render('home', {
-    setting: setting,
+    settings: settings,
     url: wpoauth.urlToConnect()
   });
 });
@@ -45,7 +45,7 @@ app.get(redirectPath, function(req, res){
 
 // access token route
 app.get('/get_token/:code', function(req, res){
-  // pass the code into setting parameters
+  // pass the code into settings parameters
   wpoauth.code(req.params.code);
 
   // request access token
@@ -55,5 +55,6 @@ app.get('/get_token/:code', function(req, res){
   });
 });
 
-app.listen(3000);
-console.log('WPOAuth app started on port 3000');
+var port = settings.port || 3001;
+app.listen(port);
+console.log('WPOAuth app started on port %d', port);

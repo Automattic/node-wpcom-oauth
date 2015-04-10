@@ -8,14 +8,14 @@ block content
   table
     tr
       td your client id
-      td #{setting.client_id}
+      td #{settings.client_id}
     tr
       td your client secret
-      td.client_secret #{setting.client_secret}
+      td.client_secret #{settings.client_secret}
     tr
       td redirect url
-      td.client_secret #{setting.url.redirect}
-  p Settings are defined in <em>setting.json</em> file.
+      td.client_secret #{setting..url.redirect}
+  p Settings are defined in <em>settings.json</em> file.
 
   h2 Get the code
   p Use <em>WPOAuth#urlToConnect()</em> method to get the url to get for the code.
