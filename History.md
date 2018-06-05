@@ -1,4 +1,9 @@
 
+0.3.4 / 2018-06-05
+==================
+
+* Upgrade superagent dependency to ^3.8 to avoid security issues in qs
+
 0.3.3 / 2015-04-09
 ==================
 
