@@ -11,7 +11,7 @@ var debug = require('debug')('wpcom-oauth');
  * Default options
  */
 
-var def = require('./default');
+var def = require('./default.json');
 
 /**
  * Options
