@@ -1,7 +1,7 @@
 {
   "name": "wpcom-oauth",
   "description": "WordPress.com OAuth2 authorization module for Node.js",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "author": "Automattic, Inc.",
   "repository": {
     "type": "git",
@@ -9,12 +9,13 @@
   },
   "contributors": [
     "Damian Suarez <rdsuarez@gmail.com>",
-    "Nathan Rajlich <nathan@automattic.com>"
+    "Nathan Rajlich <nathan@automattic.com>",
+    "Ben Lowery <blowery@automattic.com>"
   ],
   "main": "./index.js",
   "license": "MIT",
   "dependencies": {
     "debug": "*",
-    "superagent": "0.17.0"
+    "superagent": "^3.8.3"
   }
 }
