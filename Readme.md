@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/wpcom-oauth.svg)](https://badge.fury.io/js/wpcom-oauth)
+
 # wpcom-oauth
 
 [WordPress.com](http://wordpress.com) OAuth2 **server-side** authorization module for
